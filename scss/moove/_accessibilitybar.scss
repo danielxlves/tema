@@ -1,0 +1,200 @@
+#accessibilitybar {
+    display: none;
+    padding: .2rem;
+    height: 40px;
+    background-color: $gray-100;
+
+    .container-fluid {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .bars {
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: auto;
+        margin-right: .5rem;
+        align-items: center;
+
+        .fontsize,
+        .sitecolor {
+            display: flex;
+        }
+
+        .fontsize {
+            margin-left: auto;
+            margin-right: .5rem;
+        }
+
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            display: flex;
+
+            li {
+                display: list-item;
+                text-align: -webkit-match-parent;
+                margin-left: .5rem;
+
+                .btn {
+                    padding: 0 .5rem;
+                    border-radius: 4px;
+                    color: #212529;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #sitecolor_color2 {
+            background-color: #ffffcc;
+        }
+
+        #sitecolor_color3 {
+            background-color: #99ccff;
+        }
+
+        #sitecolor_color4 {
+            color: #ffff00;
+            background-color: #000000;
+        }
+    }
+
+    .usertools {
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 50%;
+
+        .userway {
+            cursor: pointer;
+            margin-right: 20px;
+
+            i {
+                color: #006BE6;
+                transform: scale(2);
+                transition: transform 0.3s;
+            }
+
+            i:hover {
+                transform: scale(2.2);
+            }
+        }
+
+        div[vw] {
+            position: relative;
+            transform: none !important;
+            margin: 0 !important;
+            min-width: 35px;
+            min-height: 30px;
+            
+            .access-button {
+                width: 30px;
+                height: 30px;
+            }
+
+            .pop-up {
+                display: none;
+            }
+        }
+
+        div[vw-plugin-wrapper] {
+            top: 320px;
+        }
+
+        div[vw-access-button] {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+body.hasaccessibilitybar {
+    #page, #page.drawers {
+        margin-top: 100px;
+    }
+
+    .navbar.fixed-top {
+        top: 40px;
+    }
+
+    #accessibilitybar {
+        display: flex;
+        align-items: center;
+    }
+
+    .secondary-navigation.moove {
+        margin-top: 40px;
+    }
+}
+
+body.has-secondarynavigation.hasaccessibilitybar:not(.notloggedin) {
+    #page,
+    #page.drawers {
+        margin-top: 170px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    body.hasaccessibilitybar:not(.notloggedin) {
+        .drawer-toggles .drawer-toggler {
+            top: 110px;
+            position: fixed;
+        }
+
+        .drawer-left,
+        .drawer-right {
+            top: calc(100px + 1px);
+            height: calc(100vh - 100px);
+        }
+    }
+
+    body.has-secondarynavigation.hasaccessibilitybar:not(.notloggedin) {
+        .drawer-toggles .drawer-toggler {
+            top: 260px;
+        }
+
+        .drawer-left,
+        .drawer-right {
+            top: calc(160px + 1px);
+            height: calc(100vh - 160px);
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    #accessibilitybar {
+        .bars {
+            margin: auto;
+
+            .usertools {
+                margin-right: auto;
+                position: static;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #accessibilitybar {
+        .bars {
+            .fontsize {
+                margin-right: auto;
+            }
+
+            .sitecolor {
+                margin-left: auto;
+            }
+            
+            span {
+                display: none;
+            }
+        }
+
+        div[vw-plugin-wrapper] {
+            position: absolute;
+            top: 120px !important;
+            max-width: none;
+        }
+    }
+}
