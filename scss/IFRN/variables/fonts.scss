@@ -1,0 +1,16 @@
+:root {
+    --font-family: "Noto Sans", sans-serif;
+    --font-heading1: 700 1.5rem/normal var(--font-family); //24px
+    --font-heading2: 700 1.125rem/normal var(--font-family); //18px
+    --font-heading3: 500 1rem/normal var(--font-family);
+    --font-heading4: 500 0.875rem/normal var(--font-family); //14px
+    --font-heading5: 500 0.75rem/normal var(--font-family); //12px
+    --font-heading6: 500 0.625rem/normal var(--font-family); //10px
+
+    --font-button1: 600 1rem/normal var(--font-family);
+    --font-button2: 600 0.875rem/normal var(--font-family); //14px
+    --font-button3: 600 0.75rem/normal var(--font-family); //12px
+
+    --font-paragraph1: 400 1rem/normal var(--font-family);
+    --font-paragraph2: 400 0.875rem/normal var(--font-family); //14px
+}
